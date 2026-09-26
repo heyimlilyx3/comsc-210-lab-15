@@ -14,8 +14,8 @@ class Movie{
     void setYear(int Year);
     int getYear();
     
-    void getTitle(string Title);
-    string setTitle();
+    void setTitle(string Title);
+    string getTitle();
 
     void print();
 
