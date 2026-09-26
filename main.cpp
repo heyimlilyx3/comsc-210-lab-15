@@ -21,9 +21,11 @@ vector<Movie> readMovies(ifstream& inputFile){
         getline(inputFile, line);       // moves to next line
         tempMovie.setScreenWriter(line);// passes this line into screenWriter
 
-
+        outputMovies.push_back(tempMovie);
 
     }
+
+    return outputMovies;
 }
 
 int main(){
@@ -38,5 +40,11 @@ int main(){
         cerr << "Unable to open input.txt";
     }
     inputFile.close();
+
+    //print movies
+    for(Movie output : movies){
+        output.print();
+        cout << endl;
+    }
     return 0;
 }
